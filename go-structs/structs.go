@@ -17,9 +17,7 @@ func main() {
 	userLastName := getUserData("Please enter your last name: ")
 	userBirthdate := getUserData("Please enter your birthdate (MM/DD/YYYY): ")
 
-	var appUser user
-
-	appUser = user{
+	appUser := user{
 		firstName: userFirstName,
 		lastName:  userLastName,
 		birthdate: userBirthdate,
@@ -32,10 +30,13 @@ func main() {
 	// 	userBirthdate,
 	// 	time.Now(),
 	// }
-	outputUserDetails(appUser)
+	outputUserDetails(&appUser)
 }
 
-func outputUserDetails(u user) {
+func outputUserDetails(u *user) {
+	// Correct way to read
+	// fmt.Println((*u).firstName, (*u).lastName, (*u).birthdate)
+	// Short way Go permit/recomended to use
 	fmt.Println(u.firstName, u.lastName, u.birthdate)
 }
 
