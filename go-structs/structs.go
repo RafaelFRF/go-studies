@@ -3,10 +3,13 @@ package main
 import (
 	"fmt"
 
+	customtype "example.com/structs/custom-type"
 	"example.com/structs/user"
 )
 
 func main() {
+	customtype.Customtype()
+
 	userFirstName := getUserData("Please enter your first name: ")
 	userLastName := getUserData("Please enter your last name: ")
 	userBirthdate := getUserData("Please enter your birthdate (MM/DD/YYYY): ")
