@@ -15,6 +15,8 @@ func main() {
 
 	appUser, err := user.New(userFirstName, userLastName, userBirthdate)
 
+	admin, err := user.NewAdmin("test@example.com", "test123")
+
 	if err != nil {
 		fmt.Println("------------------------")
 		fmt.Println(err)
@@ -37,6 +39,8 @@ func main() {
 	// }
 
 	appUser.OutputUserDetails()
+	admin.OutputAdminDetails()
+	// admin.User.OutputUserDetails()
 	appUser.ClearUserName()
 	appUser.OutputUserDetails()
 }
