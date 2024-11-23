@@ -24,7 +24,9 @@ func Practice() {
 	fmt.Println(hobbiesSliced)
 
 	// 4
-	hobbiesSliced = hobbies[1:3]
+	// hobbiesSliced = hobbies[1:3]
+	// fmt.Println(hobbiesSliced)
+	hobbiesSliced = hobbiesSliced[1:3]
 	fmt.Println(hobbiesSliced)
 
 	// 5
